@@ -1,4 +1,9 @@
-// src/firebase/config.js
+/**
+ * File: src/firebase/config.js
+ * Path: /doc-summarizer/src/firebase/config.js
+ * Description: Firebase configuration including Firestore and Storage
+ */
+
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
@@ -13,8 +18,12 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+
 export default app;
